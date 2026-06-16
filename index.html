@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>NMZLI_SYSTEM - Portfolio</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    
+    <script type="module" src="./js/main.js"></script>
+</head>
+<body>
+    <div class="scanline-overlay"></div>
+    
+    <nav class="site-header">
+        <div class="site-brand">NMZLI_SYSTEM</div>
+        <ul class="nav-list">
+            <li><a class="nav-link" href="#projects">Projects</a></li>
+            <li><a class="nav-link" href="#skills">Skills</a></li>
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><button class="btn-primary" id="connect-btn">Connect</button></li>
+        </ul>
+        <button class="mobile-menu-btn">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+    </nav>
+
+    <main class="main-container">
+        <section class="hero-section mb-section-gap" id="hero">
+            <div class="hero-content">
+                <div class="hero-init-text">> system.init()</div>
+                <h1 class="hero-title">
+                    Hi, I'm Nur Mohammad Zaarr L. Iraji.
+                </h1>
+                <p class="hero-subtitle">
+                    Data Analyst & Full Stack Engineer building systems that power clear decisions.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn-primary" href="#projects">
+                        View Data Projects <span class="material-symbols-outlined btn-icon">arrow_forward</span>
+                    </a>
+                    <a class="btn-secondary" href="#projects">
+                        Explore Software Dev    
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <div class="hero-image-wrapper">
+                    <div class="hero-glow-backdrop"></div>
+                    <div class="hero-image-content">
+                        <img alt="Nur Mohammad Zaarr L. Iraji" class="hero-portrait" src="meek.png"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-section-gap" id="skills">
+            <h2 class="section-title">
+                <span class="material-symbols-outlined section-icon">terminal</span> System_Capabilities
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-category-card">
+                    <div class="skill-category-header">
+                        <span class="material-symbols-outlined skill-category-icon">database</span>
+                        <h3 class="skill-category-title">Data & Analytics</h3>
+                    </div>
+                    <div class="skill-list">
+                        <span class="skill-badge">#SQL</span>
+                        <span class="skill-badge">#Python</span>
+                        <span class="skill-badge">#Data_Viz</span>
+                        <span class="skill-badge">#EDA</span>
+                    </div>
+                </div>
+                <div class="skill-category-card">
+                    <div class="skill-category-header">
+                        <span class="material-symbols-outlined skill-category-icon">code</span>
+                        <h3 class="skill-category-title">Full Stack & Backend</h3>
+                    </div>
+                    <div class="skill-list">
+                        <span class="skill-badge">>MERN_Stack</span>
+                        <span class="skill-badge">>Laravel</span>
+                        <span class="skill-badge">>C++</span>
+                        <span class="skill-badge">>Java</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-section-gap" id="projects">
+            <div class="projects-header-wrapper">
+                <h2 class="section-title title-no-margin">
+                    <span class="material-symbols-outlined section-icon">folder_open</span> Projects
+                </h2>
+                <div class="projects-filter">
+                    <button class="tag-analytics">Data Analytics</button>
+                    <button class="tag-dev">Full Stack Dev</button>
+                </div>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="terminal-card">
+                    <div class="terminal-card-border"></div>
+                    <div class="terminal-card-header">
+                        <span class="terminal-card-prompt">></span>
+                        <h3 class="terminal-card-title">E-Commerce Retention</h3>
+                    </div>
+                    <p class="terminal-card-desc">Analyzing customer churn patterns to optimize marketing spend.</p>
+                    <div class="terminal-card-tags">
+                        <span class="terminal-card-tag">#SQL</span>
+                        <span class="terminal-card-tag">#Python</span>
+                        <span class="terminal-card-tag">#Tableau</span>
+                    </div>
+                    <a class="terminal-card-link" href="#">
+                        View Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+
+                <div class="terminal-card">
+                    <div class="terminal-card-border"></div>
+                    <div class="terminal-card-header">
+                        <span class="terminal-card-prompt">></span>
+                        <h3 class="terminal-card-title">studyPy Platform</h3>
+                    </div>
+                    <p class="terminal-card-desc">A collaborative learning environment for Python developers.</p>
+                    <div class="terminal-card-tags">
+                        <span class="terminal-card-tag">#MERN</span>
+                        <span class="terminal-card-tag">#WebSockets</span>
+                    </div>
+                    <a class="terminal-card-link" href="https://studypy.vercel.app/">
+                        View Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+
+                <div class="terminal-card">
+                    <div class="terminal-card-border"></div>
+                    <div class="terminal-card-header">
+                        <span class="terminal-card-prompt">></span>
+                        <h3 class="terminal-card-title">AsobiHobbyShop</h3>
+                    </div>
+                    <p class="terminal-card-desc">A full-featured e-commerce engine for hobbyists.</p>
+                    <div class="terminal-card-tags">
+                        <span class="terminal-card-tag">#MERN</span>
+                        <span class="terminal-card-tag">#Redux</span>
+                        <span class="terminal-card-tag">#Node</span>
+                    </div>
+                    <a class="terminal-card-link" href="#">
+                        View Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-section-gap" id="about">
+
+            <!-- Purely CSS-animated background marquee — no JS -->
+            <div class="about-marquee-container" aria-hidden="true">
+
+                <!-- Row 1 — scroll-left -->
+                <div class="marquee-row">
+                    <div class="marquee-track">
+                        <span>&gt; Python</span><span>&gt; MERN</span><span>&gt; SQL</span><span>&gt; JavaScript</span><span>&gt; Laravel</span><span>&gt; CSS/HTML</span><span>&gt; C++</span><span>&gt; Express/Node</span><span>&gt; SQLite</span><span>&gt; Java</span>
+                        <span>&gt; Python</span><span>&gt; MERN</span><span>&gt; SQL</span><span>&gt; JavaScript</span><span>&gt; Laravel</span><span>&gt; CSS/HTML</span><span>&gt; C++</span><span>&gt; Express/Node</span><span>&gt; SQLite</span><span>&gt; Java</span>
+                        <span>&gt; Python</span><span>&gt; MERN</span><span>&gt; SQL</span><span>&gt; JavaScript</span><span>&gt; Laravel</span><span>&gt; CSS/HTML</span><span>&gt; C++</span><span>&gt; Express/Node</span><span>&gt; SQLite</span><span>&gt; Java</span>
+                        <span>&gt; Python</span><span>&gt; MERN</span><span>&gt; SQL</span><span>&gt; JavaScript</span><span>&gt; Laravel</span><span>&gt; CSS/HTML</span><span>&gt; C++</span><span>&gt; Express/Node</span><span>&gt; SQLite</span><span>&gt; Java</span>
+                    </div>
+                </div>
+
+                <!-- Row 2 — scroll-right -->
+                <div class="marquee-row">
+                    <div class="marquee-track">
+                        <span>&gt; Java</span><span>&gt; SQLite</span><span>&gt; Express/Node</span><span>&gt; C++</span><span>&gt; CSS/HTML</span><span>&gt; Laravel</span><span>&gt; JavaScript</span><span>&gt; SQL</span><span>&gt; MERN</span><span>&gt; Python</span>
+                        <span>&gt; Java</span><span>&gt; SQLite</span><span>&gt; Express/Node</span><span>&gt; C++</span><span>&gt; CSS/HTML</span><span>&gt; Laravel</span><span>&gt; JavaScript</span><span>&gt; SQL</span><span>&gt; MERN</span><span>&gt; Python</span>
+                        <span>&gt; Java</span><span>&gt; SQLite</span><span>&gt; Express/Node</span><span>&gt; C++</span><span>&gt; CSS/HTML</span><span>&gt; Laravel</span><span>&gt; JavaScript</span><span>&gt; SQL</span><span>&gt; MERN</span><span>&gt; Python</span>
+                        <span>&gt; Java</span><span>&gt; SQLite</span><span>&gt; Express/Node</span><span>&gt; C++</span><span>&gt; CSS/HTML</span><span>&gt; Laravel</span><span>&gt; JavaScript</span><span>&gt; SQL</span><span>&gt; MERN</span><span>&gt; Python</span>
+                    </div>
+                </div>
+
+                <!-- Row 3 — scroll-left -->
+                <div class="marquee-row">
+                    <div class="marquee-track">
+                        <span>&gt; SQL</span><span>&gt; C++</span><span>&gt; Python</span><span>&gt; Java</span><span>&gt; MERN</span><span>&gt; SQLite</span><span>&gt; JavaScript</span><span>&gt; Laravel</span><span>&gt; CSS/HTML</span><span>&gt; Express/Node</span>
+                        <span>&gt; SQL</span><span>&gt; C++</span><span>&gt; Python</span><span>&gt; Java</span><span>&gt; MERN</span><span>&gt; SQLite</span><span>&gt; JavaScript</span><span>&gt; Laravel</span><span>&gt; CSS/HTML</span><span>&gt; Express/Node</span>
+                        <span>&gt; SQL</span><span>&gt; C++</span><span>&gt; Python</span><span>&gt; Java</span><span>&gt; MERN</span><span>&gt; SQLite</span><span>&gt; JavaScript</span><span>&gt; Laravel</span><span>&gt; CSS/HTML</span><span>&gt; Express/Node</span>
+                        <span>&gt; SQL</span><span>&gt; C++</span><span>&gt; Python</span><span>&gt; Java</span><span>&gt; MERN</span><span>&gt; SQLite</span><span>&gt; JavaScript</span><span>&gt; Laravel</span><span>&gt; CSS/HTML</span><span>&gt; Express/Node</span>
+                    </div>
+                </div>
+
+                <!-- Row 4 — scroll-right -->
+                <div class="marquee-row">
+                    <div class="marquee-track">
+                        <span>&gt; Express/Node</span><span>&gt; JavaScript</span><span>&gt; SQLite</span><span>&gt; Python</span><span>&gt; Java</span><span>&gt; C++</span><span>&gt; MERN</span><span>&gt; CSS/HTML</span><span>&gt; SQL</span><span>&gt; Laravel</span>
+                        <span>&gt; Express/Node</span><span>&gt; JavaScript</span><span>&gt; SQLite</span><span>&gt; Python</span><span>&gt; Java</span><span>&gt; C++</span><span>&gt; MERN</span><span>&gt; CSS/HTML</span><span>&gt; SQL</span><span>&gt; Laravel</span>
+                        <span>&gt; Express/Node</span><span>&gt; JavaScript</span><span>&gt; SQLite</span><span>&gt; Python</span><span>&gt; Java</span><span>&gt; C++</span><span>&gt; MERN</span><span>&gt; CSS/HTML</span><span>&gt; SQL</span><span>&gt; Laravel</span>
+                        <span>&gt; Express/Node</span><span>&gt; JavaScript</span><span>&gt; SQLite</span><span>&gt; Python</span><span>&gt; Java</span><span>&gt; C++</span><span>&gt; MERN</span><span>&gt; CSS/HTML</span><span>&gt; SQL</span><span>&gt; Laravel</span>
+                    </div>
+                </div>
+
+                <!-- Row 5 — scroll-left -->
+                <div class="marquee-row">
+                    <div class="marquee-track">
+                        <span>&gt; Laravel</span><span>&gt; SQL</span><span>&gt; CSS/HTML</span><span>&gt; MERN</span><span>&gt; C++</span><span>&gt; Python</span><span>&gt; SQLite</span><span>&gt; Express/Node</span><span>&gt; Java</span><span>&gt; JavaScript</span>
+                        <span>&gt; Laravel</span><span>&gt; SQL</span><span>&gt; CSS/HTML</span><span>&gt; MERN</span><span>&gt; C++</span><span>&gt; Python</span><span>&gt; SQLite</span><span>&gt; Express/Node</span><span>&gt; Java</span><span>&gt; JavaScript</span>
+                        <span>&gt; Laravel</span><span>&gt; SQL</span><span>&gt; CSS/HTML</span><span>&gt; MERN</span><span>&gt; C++</span><span>&gt; Python</span><span>&gt; SQLite</span><span>&gt; Express/Node</span><span>&gt; Java</span><span>&gt; JavaScript</span>
+                        <span>&gt; Laravel</span><span>&gt; SQL</span><span>&gt; CSS/HTML</span><span>&gt; MERN</span><span>&gt; C++</span><span>&gt; Python</span><span>&gt; SQLite</span><span>&gt; Express/Node</span><span>&gt; Java</span><span>&gt; JavaScript</span>
+                    </div>
+                </div>
+
+                <!-- Row 6 — scroll-right -->
+                <div class="marquee-row">
+                    <div class="marquee-track">
+                        <span>&gt; JavaScript</span><span>&gt; Laravel</span><span>&gt; Java</span><span>&gt; Express/Node</span><span>&gt; SQLite</span><span>&gt; MERN</span><span>&gt; C++</span><span>&gt; SQL</span><span>&gt; Python</span><span>&gt; CSS/HTML</span>
+                        <span>&gt; JavaScript</span><span>&gt; Laravel</span><span>&gt; Java</span><span>&gt; Express/Node</span><span>&gt; SQLite</span><span>&gt; MERN</span><span>&gt; C++</span><span>&gt; SQL</span><span>&gt; Python</span><span>&gt; CSS/HTML</span>
+                        <span>&gt; JavaScript</span><span>&gt; Laravel</span><span>&gt; Java</span><span>&gt; Express/Node</span><span>&gt; SQLite</span><span>&gt; MERN</span><span>&gt; C++</span><span>&gt; SQL</span><span>&gt; Python</span><span>&gt; CSS/HTML</span>
+                        <span>&gt; JavaScript</span><span>&gt; Laravel</span><span>&gt; Java</span><span>&gt; Express/Node</span><span>&gt; SQLite</span><span>&gt; MERN</span><span>&gt; C++</span><span>&gt; SQL</span><span>&gt; Python</span><span>&gt; CSS/HTML</span>
+                    </div>
+                </div>
+
+                <!-- Row 7 — scroll-left -->
+                <div class="marquee-row">
+                    <div class="marquee-track">
+                        <span>&gt; C++</span><span>&gt; CSS/HTML</span><span>&gt; SQLite</span><span>&gt; Express/Node</span><span>&gt; Python</span><span>&gt; JavaScript</span><span>&gt; Java</span><span>&gt; Laravel</span><span>&gt; MERN</span><span>&gt; SQL</span>
+                        <span>&gt; C++</span><span>&gt; CSS/HTML</span><span>&gt; SQLite</span><span>&gt; Express/Node</span><span>&gt; Python</span><span>&gt; JavaScript</span><span>&gt; Java</span><span>&gt; Laravel</span><span>&gt; MERN</span><span>&gt; SQL</span>
+                        <span>&gt; C++</span><span>&gt; CSS/HTML</span><span>&gt; SQLite</span><span>&gt; Express/Node</span><span>&gt; Python</span><span>&gt; JavaScript</span><span>&gt; Java</span><span>&gt; Laravel</span><span>&gt; MERN</span><span>&gt; SQL</span>
+                        <span>&gt; C++</span><span>&gt; CSS/HTML</span><span>&gt; SQLite</span><span>&gt; Express/Node</span><span>&gt; Python</span><span>&gt; JavaScript</span><span>&gt; Java</span><span>&gt; Laravel</span><span>&gt; MERN</span><span>&gt; SQL</span>
+                    </div>
+                </div>
+
+                <!-- Row 8 — scroll-right -->
+                <div class="marquee-row">
+                    <div class="marquee-track">
+                        <span>&gt; MERN</span><span>&gt; Java</span><span>&gt; Python</span><span>&gt; CSS/HTML</span><span>&gt; SQL</span><span>&gt; JavaScript</span><span>&gt; C++</span><span>&gt; SQLite</span><span>&gt; Laravel</span><span>&gt; Express/Node</span>
+                        <span>&gt; MERN</span><span>&gt; Java</span><span>&gt; Python</span><span>&gt; CSS/HTML</span><span>&gt; SQL</span><span>&gt; JavaScript</span><span>&gt; C++</span><span>&gt; SQLite</span><span>&gt; Laravel</span><span>&gt; Express/Node</span>
+                        <span>&gt; MERN</span><span>&gt; Java</span><span>&gt; Python</span><span>&gt; CSS/HTML</span><span>&gt; SQL</span><span>&gt; JavaScript</span><span>&gt; C++</span><span>&gt; SQLite</span><span>&gt; Laravel</span><span>&gt; Express/Node</span>
+                        <span>&gt; MERN</span><span>&gt; Java</span><span>&gt; Python</span><span>&gt; CSS/HTML</span><span>&gt; SQL</span><span>&gt; JavaScript</span><span>&gt; C++</span><span>&gt; SQLite</span><span>&gt; Laravel</span><span>&gt; Express/Node</span>
+                    </div>
+                </div>
+
+                <!-- Row 9 — scroll-left -->
+                <div class="marquee-row">
+                    <div class="marquee-track">
+                        <span>&gt; SQLite</span><span>&gt; Python</span><span>&gt; Java</span><span>&gt; CSS/HTML</span><span>&gt; Express/Node</span><span>&gt; SQL</span><span>&gt; Laravel</span><span>&gt; C++</span><span>&gt; JavaScript</span><span>&gt; MERN</span>
+                        <span>&gt; SQLite</span><span>&gt; Python</span><span>&gt; Java</span><span>&gt; CSS/HTML</span><span>&gt; Express/Node</span><span>&gt; SQL</span><span>&gt; Laravel</span><span>&gt; C++</span><span>&gt; JavaScript</span><span>&gt; MERN</span>
+                        <span>&gt; SQLite</span><span>&gt; Python</span><span>&gt; Java</span><span>&gt; CSS/HTML</span><span>&gt; Express/Node</span><span>&gt; SQL</span><span>&gt; Laravel</span><span>&gt; C++</span><span>&gt; JavaScript</span><span>&gt; MERN</span>
+                        <span>&gt; SQLite</span><span>&gt; Python</span><span>&gt; Java</span><span>&gt; CSS/HTML</span><span>&gt; Express/Node</span><span>&gt; SQL</span><span>&gt; Laravel</span><span>&gt; C++</span><span>&gt; JavaScript</span><span>&gt; MERN</span>
+                    </div>
+                </div>
+
+                <!-- Row 10 — scroll-right -->
+                <div class="marquee-row">
+                    <div class="marquee-track">
+                        <span>&gt; CSS/HTML</span><span>&gt; MERN</span><span>&gt; Laravel</span><span>&gt; SQLite</span><span>&gt; Java</span><span>&gt; Python</span><span>&gt; SQL</span><span>&gt; JavaScript</span><span>&gt; Express/Node</span><span>&gt; C++</span>
+                        <span>&gt; CSS/HTML</span><span>&gt; MERN</span><span>&gt; Laravel</span><span>&gt; SQLite</span><span>&gt; Java</span><span>&gt; Python</span><span>&gt; SQL</span><span>&gt; JavaScript</span><span>&gt; Express/Node</span><span>&gt; C++</span>
+                        <span>&gt; CSS/HTML</span><span>&gt; MERN</span><span>&gt; Laravel</span><span>&gt; SQLite</span><span>&gt; Java</span><span>&gt; Python</span><span>&gt; SQL</span><span>&gt; JavaScript</span><span>&gt; Express/Node</span><span>&gt; C++</span>
+                        <span>&gt; CSS/HTML</span><span>&gt; MERN</span><span>&gt; Laravel</span><span>&gt; SQLite</span><span>&gt; Java</span><span>&gt; Python</span><span>&gt; SQL</span><span>&gt; JavaScript</span><span>&gt; Express/Node</span><span>&gt; C++</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <h2 class="section-title">
+                <span class="material-symbols-outlined section-icon">info</span> About_Mission
+            </h2>
+            <div class="about-grid">
+                <div>
+                    <p class="about-text">
+                        I am driven by the intersection of data clarity and robust software architecture. My ultimate aspiration is to establish <span class="about-highlight">AXIS</span>, a tech-related game company that leverages deep analytics to craft immersive, player-driven experiences.
+                    </p>
+                    <p class="about-text">
+                        Currently, I focus on building scalable web solutions and extracting actionable insights from complex datasets to lay the groundwork for this vision.
+                    </p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot timeline-dot-active"></div>
+                        <h4 class="timeline-title timeline-title-active">Hackathons</h4>
+                        <p class="timeline-desc">Rapid prototyping and innovative problem-solving under pressure.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h4 class="timeline-title">Networking Labs</h4>
+                        <p class="timeline-desc">Building foundational knowledge in system architecture and data flow.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h4 class="timeline-title">Team Collaborations</h4>
+                        <p class="timeline-desc">Leading cross-functional teams to deliver production-ready software.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="site-footer-wrapper">
+        <footer class="site-footer">
+            <div class="footer-copyright">
+                © 2026 NMZLI. SYSTEM_READY
+            </div>
+            <ul class="footer-links">
+                <li><a class="footer-link" href="https://github.com/meekoUrabe">GitHub</a></li>
+                <li><a class="footer-link" href="https://www.linkedin.com/in/zaarr06/">LinkedIn</a></li>
+                <li><a class="footer-link" href="#" id="terminal-trigger">Terminal_V1</a></li>
+            </ul>
+        </footer>
+    </div>
+    <!-- Connect Modal -->
+    <div id="connect-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-label="Establish Connection">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2 class="modal-title">&gt; establish_connection</h2>
+                <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <p class="modal-subtitle">Select a channel to open a line.</p>
+            <ul class="modal-link-list">
+                <li>
+                    <a class="modal-link" href="mailto:zaarr06@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <svg class="modal-link-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        <span class="modal-link-label">Gmail</span>
+                        <span class="modal-link-arrow material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="modal-link" href="https://www.linkedin.com/in/zaarr06/" target="_blank" rel="noopener noreferrer">
+                        <svg class="modal-link-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57A1.46 1.46 0 0 1 14.38 12.11A1.46 1.46 0 0 1 15.84 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"/>
+                        </svg>
+                        <span class="modal-link-label">LinkedIn</span>
+                        <span class="modal-link-arrow material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="modal-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                        <svg class="modal-link-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+                        </svg>
+                        <span class="modal-link-label">GitHub</span>
+                        <span class="modal-link-arrow material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- CLI Easter Egg Overlay -->
+    <div class="cli-overlay hidden" id="cli-overlay" role="dialog" aria-modal="true" aria-label="Terminal V1">
+        <div class="cli-window">
+            <div class="cli-header">
+                <div class="cli-window-controls">
+                    <span class="cli-control cli-control--close" id="cli-close-btn" title="Close"></span>
+                    <span class="cli-control cli-control--minimize"></span>
+                    <span class="cli-control cli-control--maximize"></span>
+                </div>
+                <div class="cli-header-title">NMZLI_SYSTEM &mdash; Terminal V1</div>
+                <div class="cli-header-spacer"></div>
+            </div>
+            <div class="cli-body" id="cli-body">
+                <div class="cli-output" id="cli-output">
+                    <p class="cli-output-line cli-output-line--system">NMZLI_SYSTEM Terminal V1 &mdash; Initializing...</p>
+                    <p class="cli-output-line cli-output-line--system">Type <span class="cli-highlight">'help'</span> to list available commands.</p>
+                    <p class="cli-output-line cli-output-line--system">&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;</p>
+                </div>
+                <div class="cli-input-line">
+                    <span class="cli-prompt">visitor@nmzli:~$</span>
+                    <div class="cli-input-wrapper">
+                        <input
+                            type="text"
+                            class="cli-input"
+                            id="cli-input"
+                            autocomplete="off"
+                            autocorrect="off"
+                            autocapitalize="off"
+                            spellcheck="false"
+                            aria-label="Terminal input"
+                        />
+                        <span class="cli-cursor" id="cli-cursor">&#x2588;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

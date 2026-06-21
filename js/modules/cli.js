@@ -1,10 +1,8 @@
-/* =============================================
-   cli.js — Terminal V1 Easter Egg
-   ============================================= */
+
 
 export function initCLI() {
 
-    // --- Element references ---
+    
     const trigger   = document.getElementById('terminal-trigger');
     const overlay   = document.getElementById('cli-overlay');
     const closeBtn  = document.getElementById('cli-close-btn');
@@ -15,24 +13,24 @@ export function initCLI() {
 
     if (!overlay || !inputEl) return;
 
-    // Build ghost-text mirror for cursor positioning
-    const wrapper  = inputEl.parentElement; // .cli-input-wrapper
+    
+    const wrapper  = inputEl.parentElement; 
     const mirrorEl = document.createElement('span');
     mirrorEl.className = 'cli-input-mirror';
     wrapper.insertBefore(mirrorEl, cursorEl);
 
-    // --- State (scoped inside initCLI) ---
+    
     const cmdHistory = [];
     let historyIndex = -1;
 
-    // --- Command registry ---
+    
     const COMMANDS = {
 
         help() {
             return [
                 { text: 'Available commands:',                        cls: 'cli-output-line--response' },
                 { text: '  whoami       — Who is NMZLI?',            cls: 'cli-output-line--table'    },
-                { text: '  ls projects  — List current projects.',    cls: 'cli-output-line--table'    },
+                { text: '  ls / projects — List current projects.',   cls: 'cli-output-line--table'    },
                 { text: '  clear        — Clear the terminal.',        cls: 'cli-output-line--table'    },
                 { text: '  exit         — Close Terminal V1.',         cls: 'cli-output-line--table'    },
             ];
@@ -42,18 +40,25 @@ export function initCLI() {
             return [
                 { text: 'Nur Mohammad Zaarr L. Iraji.',    cls: 'cli-output-line--response' },
                 { text: '1st-year ACT-NT student.',        cls: 'cli-output-line--response' },
-                { text: 'Full Stack Dev & Data Analyst.',  cls: 'cli-output-line--response' },
-                { text: 'Future founder of AXIS.',         cls: 'cli-output-line--response' },
+                { text: 'Full Stack Engineer & Aspiring Data Analyst.',  cls: 'cli-output-line--response' },
             ];
         },
 
         'ls projects'() {
             return [
                 { text: 'Projects/',                                            cls: 'cli-output-line--response' },
-                { text: '  1.  E-Commerce Retention   [Data Analytics]',       cls: 'cli-output-line--table'    },
-                { text: '  2.  studyPy Platform        [MERN / Full Stack]',   cls: 'cli-output-line--table'    },
-                { text: '  3.  AsobiHobbyShop          [MERN / Full Stack]',   cls: 'cli-output-line--table'    },
+                { text: '  1.  StudyPy                 [MERN / Full Stack]',   cls: 'cli-output-line--table'    },
+                { text: '  2.  TabiOS01                [VanillaJS / UI/UX]',   cls: 'cli-output-line--table'    },
+                { text: '  3.  SteamSight              [Python / Postgres]',   cls: 'cli-output-line--table'    },
             ];
+        },
+
+        ls() {
+            return this['ls projects']();
+        },
+
+        projects() {
+            return this['ls projects']();
         },
 
         clear() {
@@ -65,9 +70,15 @@ export function initCLI() {
             closeCLI();
             return null;
         },
+
+        sudo() {
+            return [
+                { text: 'Permission denied: visitor is not in the sudoers file. This incident will be reported.', cls: 'cli-output-line--error' },
+            ];
+        },
     };
 
-    // --- Helpers ---
+    
 
     function printLines(lines) {
         if (!lines) return;
@@ -108,7 +119,7 @@ export function initCLI() {
         mirrorEl.textContent = inputEl.value || '';
     }
 
-    // --- Open / Close ---
+    
 
     function openCLI(e) {
         if (e) e.preventDefault();
@@ -129,7 +140,7 @@ export function initCLI() {
         syncMirror();
     }
 
-    // --- Command processor ---
+    
 
     function processCommand() {
         const raw = inputEl.value.trim();
@@ -150,7 +161,11 @@ export function initCLI() {
         }
 
         const key     = raw.toLowerCase();
-        const handler = COMMANDS[key];
+        let handler   = COMMANDS[key];
+
+        if (!handler && (key === 'sudo' || key.startsWith('sudo '))) {
+            handler = COMMANDS['sudo'];
+        }
 
         if (handler) {
             const result = handler();
@@ -170,24 +185,24 @@ export function initCLI() {
         scrollToBottom();
     }
 
-    // --- Event listeners ---
+    
 
     if (trigger) trigger.addEventListener('click', openCLI);
     if (closeBtn) closeBtn.addEventListener('click', closeCLI);
 
-    // Escape key → close (only acts when overlay is open)
+    
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && !overlay.classList.contains('hidden')) {
             closeCLI();
         }
     });
 
-    // Click anywhere on the terminal body to keep input focused
+    
     if (cliBody) {
         cliBody.addEventListener('click', () => inputEl.focus());
     }
 
-    // Enter → process; Arrow keys → history navigation
+    
     inputEl.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
             e.preventDefault();
@@ -223,10 +238,10 @@ export function initCLI() {
         }
     });
 
-    // Sync mirror on every keystroke
+    
     inputEl.addEventListener('input', syncMirror);
 
-    // Pause cursor blink while typing, resume after 800 ms idle
+    
     let blinkTimeout;
     inputEl.addEventListener('keydown', () => {
         cursorEl.style.animationPlayState = 'paused';

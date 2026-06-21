@@ -1,6 +1,4 @@
-/* =========================================
-   Global Resets & Variables
-   ========================================= */
+
 ::selection {
     background-color: #39FF14;
     color: #107100;
@@ -31,9 +29,7 @@ body {
     .main-container { padding: 8rem 48px 3rem; }
 }
 
-/* =========================================
-   Effects & Typography
-   ========================================= */
+
 .scanline-overlay {
     position: fixed;
     top: 0;
@@ -63,9 +59,7 @@ body {
 .title-no-margin { margin: 0; border-bottom: none; padding-bottom: 0; }
 .section-icon { color: #39FF14; }
 
-/* =========================================
-   Navigation
-   ========================================= */
+
 .site-header {
     position: fixed;
     top: 0;
@@ -104,7 +98,7 @@ body {
 
 @media (min-width: 768px) { .nav-list { display: flex; } }
 
-/* JavaScript toggles this class for mobile view */
+
 .nav-list.mobile-active {
     display: flex;
     flex-direction: column;
@@ -141,9 +135,7 @@ body {
 
 @media (min-width: 768px) { .mobile-menu-btn { display: none; } }
 
-/* =========================================
-   Buttons
-   ========================================= */
+
 .btn-primary {
     background-color: #39FF14;
     color: #0A0A0A;
@@ -182,9 +174,7 @@ body {
 
 .btn-secondary:hover { background-color: rgba(57, 255, 20, 0.1); }
 
-/* =========================================
-   Hero Section
-   ========================================= */
+
 .hero-section {
     display: grid;
     grid-template-columns: 1fr;
@@ -238,7 +228,7 @@ body {
 
 .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; }
 
-/* Hero Image Specifics */
+
 .hero-image-container {
     position: relative;
     height: 100%;
@@ -290,9 +280,7 @@ body {
 .hero-portrait:hover { transform: scale(1.15); }
 @media (min-width: 768px) { .hero-portrait:hover { transform: scale(1.3); } }
 
-/* =========================================
-   Skills Matrix Section
-   ========================================= */
+
 .skills-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -334,9 +322,7 @@ body {
     border: 1px solid #2d3828;
 }
 
-/* =========================================
-   Project Showcase Section
-   ========================================= */
+
 .projects-header-wrapper {
     display: flex;
     flex-direction: column;
@@ -396,7 +382,7 @@ body {
         gap: 36px;
     }
     
-    /* Alternate row ordering on desktop */
+    
     .project-row:nth-child(even) .project-media {
         order: 2;
     }
@@ -405,7 +391,7 @@ body {
     }
 }
 
-/* Media Window Frame Style */
+
 .project-media {
     background-color: #0A0A0A;
     border: 1px solid #1A1A1A;
@@ -462,7 +448,7 @@ body {
     color: #85967c;
     flex-grow: 1;
     text-align: center;
-    margin-right: 42px; /* balance the controls space for centering */
+    margin-right: 42px; 
 }
 
 .project-image-wrapper {
@@ -564,11 +550,9 @@ body {
 
 .terminal-card-link:hover { color: #39FF14; }
 
-/* =========================================
-   About Background Marquee
-   ========================================= */
 
-/* Give the section a stacking context to contain the absolute marquee */
+
+
 #about {
     position: relative;
     z-index: 1;
@@ -599,7 +583,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
-/* Absolute background layer — 100vw breakout, clears the h2, bleeds to footer */
+
 .about-marquee-container {
     position: absolute;
     top: 3.5rem;
@@ -626,7 +610,7 @@ body {
     display: flex;
     white-space: nowrap;
     width: max-content;
-    gap: 0; /* spacing handled by span padding */
+    gap: 0; 
 }
 
 .marquee-track span {
@@ -640,17 +624,17 @@ body {
     user-select: none;
 }
 
-/* Odd rows scroll left */
+
 .marquee-row:nth-child(odd) .marquee-track {
     animation: marquee-scroll-left 28s linear infinite;
 }
 
-/* Even rows scroll right */
+
 .marquee-row:nth-child(even) .marquee-track {
     animation: marquee-scroll-right 34s linear infinite;
 }
 
-/* Vary speed across rows 1–10 — no two adjacent rows share the same duration */
+
 .marquee-row:nth-child(3)  .marquee-track { animation-duration: 22s; }
 .marquee-row:nth-child(4)  .marquee-track { animation-duration: 38s; }
 .marquee-row:nth-child(5)  .marquee-track { animation-duration: 32s; }
@@ -670,9 +654,7 @@ body {
     100% { transform: translateX(0); }
 }
 
-/* =========================================
-   About Section & Timeline
-   ========================================= */
+
 
 .about-grid {
     display: grid;
@@ -740,9 +722,7 @@ body {
     margin: 0;
 }
 
-/* =========================================
-   Modal — Connect
-   ========================================= */
+
 
 .hidden { display: none !important; }
 
@@ -883,9 +863,7 @@ body {
     transform: translateX(0);
 }
 
-/* =========================================
-   Footer
-   ========================================= */
+
 
 .site-footer-wrapper {
     width: 100%;
@@ -933,11 +911,9 @@ body {
 
 .footer-link:hover { color: #efffe3; }
 
-/* =========================================
-   CLI Easter Egg — Terminal V1
-   ========================================= */
 
-/* Overlay backdrop */
+
+
 .cli-overlay {
     position: fixed;
     inset: 0;
@@ -947,7 +923,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 16px;
-    /* CRT scanline texture over the entire overlay */
+    
     background-image: linear-gradient(
         to bottom,
         rgba(255, 255, 255, 0) 0%,
@@ -969,7 +945,7 @@ body {
     to   { opacity: 1; }
 }
 
-/* Terminal window chrome */
+
 .cli-window {
     background-color: #0A0A0A;
     border: 1px solid #39FF14;
@@ -988,7 +964,7 @@ body {
     to   { transform: scale(1) translateY(0); opacity: 1; }
 }
 
-/* Title bar */
+
 .cli-header {
     display: flex;
     align-items: center;
@@ -1032,11 +1008,11 @@ body {
 }
 
 .cli-header-spacer {
-    /* mirrors window-controls width to keep title centered */
+    
     width: 42px;
 }
 
-/* Scrollable body */
+
 .cli-body {
     display: flex;
     flex-direction: column;
@@ -1048,7 +1024,7 @@ body {
     min-height: 0;
 }
 
-/* Output lines */
+
 .cli-output {
     flex: 1;
     overflow-y: auto;
@@ -1073,7 +1049,7 @@ body {
     word-break: break-all;
 }
 
-/* Colour variants */
+
 .cli-output-line--system  { color: #85967c; }
 .cli-output-line--cmd     { color: #dae6d0; }
 .cli-output-line--response{ color: #39FF14; }
@@ -1082,10 +1058,10 @@ body {
 
 .cli-highlight { color: #39FF14; }
 
-/* Divider line printed between entries */
+
 .cli-output-line--divider { color: #1e2e19; }
 
-/* Echoed command line prefix */
+
 .cli-echo-prompt {
     color: #39FF14;
     margin-right: 6px;
@@ -1093,7 +1069,7 @@ body {
     font-size: 14px;
 }
 
-/* Active input row */
+
 .cli-input-line {
     display: flex;
     align-items: center;
@@ -1117,7 +1093,7 @@ body {
     align-items: center;
 }
 
-/* Invisible native input sitting on top of the cursor */
+
 .cli-input {
     position: absolute;
     inset: 0;
@@ -1125,7 +1101,7 @@ body {
     background: transparent;
     border: none;
     outline: none;
-    color: transparent; /* text rendered invisibly; cursor block shows position */
+    color: transparent; 
     caret-color: transparent;
     font-family: 'JetBrains Mono', monospace;
     font-size: 14px;
@@ -1135,7 +1111,7 @@ body {
     z-index: 2;
 }
 
-/* Ghost text mirror — used by JS to measure text width for cursor positioning */
+
 .cli-input-mirror {
     font-family: 'JetBrains Mono', monospace;
     font-size: 14px;
@@ -1146,7 +1122,7 @@ body {
     z-index: 1;
 }
 
-/* Blinking block cursor */
+
 .cli-cursor {
     font-family: 'JetBrains Mono', monospace;
     font-size: 14px;
@@ -1162,9 +1138,9 @@ body {
     50%       { opacity: 0; }
 }
 
-/* Mobile tweaks */
+
 @media (max-width: 767px) {
     .cli-body { padding: 14px; }
     .cli-output-line { font-size: 13px; }
     .cli-prompt, .cli-input, .cli-cursor { font-size: 13px; }
-}
+}

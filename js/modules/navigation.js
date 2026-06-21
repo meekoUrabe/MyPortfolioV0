@@ -1,6 +1,4 @@
-/* =============================================
-   navigation.js — Mobile nav + smooth scroll
-   ============================================= */
+
 
 export function initNavigation() {
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');

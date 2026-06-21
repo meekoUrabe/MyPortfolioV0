@@ -1,6 +1,4 @@
-/* =============================================
-   main.js — Application entry point
-   ============================================= */
+
 
 import { initNavigation } from './modules/navigation.js';
 import { initModal }      from './modules/modal.js';

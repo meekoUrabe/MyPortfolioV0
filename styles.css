@@ -336,33 +336,6 @@ body {
     .projects-header-wrapper { flex-direction: row; justify-content: space-between; align-items: center; }
 }
 
-.projects-filter { display: flex; gap: 0.5rem; }
-
-.tag-analytics {
-    background-color: #39FF14;
-    color: #0A0A0A;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 14px;
-    padding: 6px 16px;
-    border-radius: 9999px;
-    font-weight: 600;
-    border: none;
-}
-
-.tag-dev {
-    background-color: transparent;
-    border: 1px solid #3c4b35;
-    color: #b7b5b4;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 14px;
-    padding: 6px 16px;
-    border-radius: 9999px;
-    transition: all 0.2s;
-    cursor: pointer;
-}
-
-.tag-dev:hover { color: #dae6d0; border-color: #85967c; }
-
 .projects-list {
     display: flex;
     flex-direction: column;

@@ -6,7 +6,8 @@ export function initNavigation() {
 
     if (mobileMenuBtn && navList) {
         mobileMenuBtn.addEventListener('click', () => {
-            navList.classList.toggle('mobile-active');
+            const isActive = navList.classList.toggle('mobile-active');
+            mobileMenuBtn.setAttribute('aria-expanded', isActive ? 'true' : 'false');
         });
     }
 
@@ -19,6 +20,13 @@ export function initNavigation() {
             if (targetEl) {
                 e.preventDefault();
                 targetEl.scrollIntoView({ behavior: 'smooth' });
+
+                if (navList && navList.classList.contains('mobile-active')) {
+                    navList.classList.remove('mobile-active');
+                    if (mobileMenuBtn) {
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    }
+                }
             }
         });
     });
